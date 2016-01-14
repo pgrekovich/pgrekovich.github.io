@@ -1,0 +1,39 @@
+{
+  "name": "pgrekovich.com",
+  "version": "1.0.0",
+  "description": "pgrekovich.com website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgrekovich/pgrekovich.github.io.git"
+  },
+  "author": "Pavel Grekovich <pgrekovich@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pgrekovich/pgrekovich.github.io/issues"
+  },
+  "homepage": "https://github.com/pgrekovich/pgrekovich.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.2.2",
+    "autoprefixer-core": "^6.0.1",
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-evil-icons": "^0.2.0",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss-autoreset": "^1.1.1",
+    "postcss-cssnext": "^2.3.0",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-initial": "^1.4.0",
+    "postcss-mixins": "^3.0.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.2.0"
+  }
+}
