@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Blockchain</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+
+<body class="shower list">
+
+	<style>
+		.slide::after,
+		.slide::after {
+			visibility: hidden;
+		}
+	</style>
+
+	<header class="caption">
+		<h1>Blockchain</h1>
+		<p>
+			<a href="http://pgrekovich.com">Pavel Hrakovich</a>
+		</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Blockchain</h2>
+		<p>Brought to you by
+			<a href="http://pgrekovich.com">Pavel Hrakovich</a>
+		</p>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="abstract background">
+		</figure>
+		<style>
+			#cover h2 {
+				margin: 30px 0 0;
+				color: #FFF;
+				text-align: center;
+				font-size: 70px;
+			}
+
+			#cover p {
+				margin: 10px 0 0;
+				text-align: center;
+				color: #FFF;
+				font-style: italic;
+				font-size: 20px;
+			}
+
+			#cover p a {
+				color: #FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 80px">The blockchain is the technology running the bitcoin.</h2>
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 80px">Blockchain - trustless consensus in distributed realtime database</h2>
+		</style>
+	</section>
+
+	<section class="slide" id="slide3">
+		<h2 class="shout" style="font-size: 80px">Blockchain - is a continuously growing list of records which are linked and secured using cryptography</h2>
+		</style>
+	</section>
+
+
+	<section class="slide">
+		<img class="place" width="80%" src="pictures/currency-vs-technology.png" alt="Flight mode icon">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">4 key concepts of blockchain </h2>
+	</section>
+
+	<section class="slide">
+		<ol class="place" style="font-size: 45px">
+			<li class="next">Distributed shared ledger</li>
+			<li class="next">Cryptography</li>
+			<li class="next">Consensus</li>
+			<li class="next">Smart contracts</li>
+		</ol>
+	</section>
+
+	<section class="slide" id="shared-ledgers">
+		<h2>Distributed shared ledgers</h2>
+		<ul>
+			<li class="next">Group of
+				<b>replicated</b> logs/databases (nodes)</li>
+			<li class="next">Transactions distributed in
+				<b>blocks</b>
+			</li>
+			<li class="next">All nodes hold
+				<b>all</b> transactions</li>
+			<li class="next">Parties identified with public key (= anonymised)</li>
+			<li class="next">Accessibility of transactions depending on blockchain implementation</li>
+			<li class="next">Resilient for failure of one or more nodes</li>
+			<li class="next">Group of nodes operate
+				<b>tamper proof</b>
+			</li>
+		</ul>
+		<img class="place right" width="30%" src="pictures/network.jpg">
+		<style>
+			#shared-ledgers b {
+				color: #16A9D8;
+			}
+
+			#shared-ledgers img {
+				z-index: -1;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Cryptography. Hashing</h2>
+		<p>Creation of a bit string (digest) representing integrity of content other string. Changing one character in the original
+			string results in complete different has. Changing multiple characters in original string that results in the same hash
+			requires large amount of processing power for a long period of time. </p>
+		<img class="place bottom" width="80%" src="pictures/hashing.png">
+	</section>
+
+	<section class="slide">
+		<h2>Cryptography. Public & private keys and wallets</h2>
+		<p>Two large prime numbers that have a mathematical relation with each other. A string encrypted with one key can only be
+			decrypted with the other. One key needs to be kept private, the other one can be made publicly known so that it can be
+			used by other parties to exchange data with you in a secure manner. Private keys need to be stored that it is accessible
+			only for owner. This can be done on personal devices (PC, smart card, USB stick, phone, …) or remotely with a service
+			provider (cold and hot wallets).</p>
+	</section>
+
+	<section class="slide" id="encryption">
+		<h2>Cryptography. Encryption</h2>
+		<p>Scrambling of clear text with the public key of the recipient so that the holder of that private key is the only one that
+			can descramble the message. This is used to guarantee the confidentiality of the data exchanged. </p>
+		<img class="place bottom" width="80%" src="pictures/encryption.png">
+
+		<style>
+			#encryption img {
+				top: 65%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="signature">
+		<h2>Cryptography. Digital signature</h2>
+		<p>Encryption of hash representing of original data to be secured with the private key of the sender (called digital signature)
+			that is decrypted by the recipient with the public of the sender. If the decrypted hash matches the content of the original
+			data it implies two things. First, the encryption can only be performed with the private key corresponding with public
+			key and secondly, the original data can’t be tampered with.</p>
+		<img class="place bottom" width="80%" src="pictures/signature.png">
+
+		<style>
+			#signature img {
+				bottom: 55px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="consensus">
+		<h2>Consensus</h2>
+		<ul>
+			<li class="next">Consensus =
+				<b>Majority</b> of nodes agree on validity of transactions</li>
+			<li class="next">Includes validation on
+				<b>double-spending</b>
+			</li>
+			<li class="next">Permissionless (public) vs. permissioned (private) blockchain setup</li>
+			<li class="next">Proof-of-work / proof-of-stake the proof
+				<b>validity of node</b>
+				<br /> (only applicable for permissionless network)</li>
+		</ul>
+		<img class="place bottom right" width="50%" src="pictures/consensus.jpg">
+		<style>
+			#consensus b {
+				color: #16A9D8;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="smart-contracts">
+		<h2>Smart Contracts</h2>
+		<ul>
+			<li class="next">
+				<b>Business logic</b> that can be assigned to a transaction on the blockchain</li>
+			<li class="next">Acts as a
+				<b>‘notary’</b> of blockchain transactions</li>
+			<li class="next">Holds
+				<b>conditions</b> under which specific actions can/must be perfomed</li>
+			<li class="next">Facilitates escrow services</li>
+			<li class="next">
+				<b>Can’t be modified</b> without predefined permissions</li>
+		</ul>
+		<img class="place bottom right" width="40%" src="pictures/smart-contracts.png">
+		<style>
+			#smart-contracts b {
+				color: #16A9D8;
+			}
+
+			#smart-contracts img {
+				z-index: -1;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Sample case of smart contract</h2>
+		<img class="place bottom" width="60%" style="bottom: 45px;" src="pictures/smart-contract-example.png">
+		<style>
+			#smart-contracts img {
+				z-index: -1;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>How a blockchain works?</h2>
+		<img class="place bottom" width="60%" style="bottom: 45px;" src="pictures/how-blockchain-works.svg">
+		<style>
+			#smart-contracts img {
+				z-index: -1;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="linus">
+		<figure>
+			<blockquote>
+				<p>Talk is cheap. Show me the code.</p>
+			</blockquote>
+			<figcaption>Linus Torvalds</figcaption>
+		</figure>
+		<img class="place top right" height="100%" src="pictures/linus.jpg">
+		<style>
+			#linus .shout {
+				font-size: 30px;
+				text-align: right;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Value of blockchain technology</h2>
+	</section>
+
+	<section class="slide">
+		<ol class="place" style="font-size: 35px">
+			<li class="next">Reduction of costs and complexity</li>
+			<li class="next">Shared trusted transactions</li>
+			<li class="next">Reduction of errors</li>
+			<li class="next">Resilience</li>
+			<li class="next">Secure</li>
+			<li class="next">Auditability</li>
+		</ol>
+	</section>
+
+	<section class="slide" id="potential">
+		<h2>Potential of blockchain extends across a wide range of application areas</h2>
+		<ul class="double">
+			<li>
+				<img width="50px" src="pictures/money-bag.jpg" />Financial Services</li>
+			<li>
+				<img width="50px" src="pictures/governmental.png" />Governmental services</li>
+			<li>
+				<img width="50px" src="pictures/trade.png" />Trade</li>
+			<li>
+				<img width="50px" src="pictures/property.png" />Property</li>
+			<li>
+				<img width="50px" src="pictures/security.png" />Identification & Security</li>
+			<li>
+				<img width="50px" src="pictures/iot.jpg" />Internet of Things (IoT)</li>
+		</ul>
+		<style>
+			#potential ul li {
+				margin-bottom: 45px;
+			}
+
+			#potential ul li::before {
+				content: '';
+			}
+
+			#potential ul li > img {
+				margin-right: 10px;   
+				margin-bottom: -15px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="see-more">
+		<h2 class="shout">
+			<img src="pictures/logo.svg" alt="Shower logo">
+			<a href="https://github.com/shower/shower">Shower</a>
+		</h2>
+		<style>
+			#see-more h2 {
+				font-size: 100px
+			}
+
+			#see-more img {
+				width: 0.72em;
+				height: 0.72em;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Questions?</h2>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Powered by Shower</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+
+</html>
