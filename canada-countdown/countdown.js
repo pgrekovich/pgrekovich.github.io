@@ -1,4 +1,4 @@
-const target_date = new Date("August 25, 2018 00:00:00");
+const target_date = new Date("September 7, 2018 00:00:00");
 let days, hours, minutes, seconds;
 
 const countdown = document.getElementById("tiles");
