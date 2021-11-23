@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drum Kit</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="drumpad-wrapper">
+        <div class="main">
+          <div class="screen">♬♫♪◖(● o ●)◗♪♫♬</div>
+          <div class="drumpad-container">
+            <div data-key="65" class="drum-btn">
+              <kbd>A</kbd>
+            </div>
+            <div data-key="83" class="drum-btn">
+              <kbd>S</kbd>
+            </div>
+            <div data-key="68" class="drum-btn">
+              <kbd>D</kbd>
+            </div>
+            <div data-key="70" class="drum-btn">
+              <kbd>F</kbd>
+            </div>
+            <div data-key="71" class="drum-btn">
+              <kbd>G</kbd>
+            </div>
+            <div data-key="72" class="drum-btn">
+              <kbd>H</kbd>
+            </div>
+            <div data-key="74" class="drum-btn">
+              <kbd>J</kbd>
+            </div>
+            <div data-key="75" class="drum-btn">
+              <kbd>K</kbd>
+            </div>
+            <div data-key="76" class="drum-btn">
+              <kbd>L</kbd>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebuttons-container">
+            <div class="sidebutton"></div>
+            <div class="sidebutton"></div>
+            <div class="sidebutton"></div>
+            <div class="sidebutton"></div>
+          </div>
+          <div class="sliders-container">
+            <div class="slider-left"></div>
+            <div class="slider-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio data-key="65" src="resources/sounds/clap.wav"></audio>
+    <audio data-key="83" src="resources/sounds/hihat.wav"></audio>
+    <audio data-key="68" src="resources/sounds/kick.wav"></audio>
+    <audio data-key="70" src="resources/sounds/openhat.wav"></audio>
+    <audio data-key="71" src="resources/sounds/boom.wav"></audio>
+    <audio data-key="72" src="resources/sounds/ride.wav"></audio>
+    <audio data-key="74" src="resources/sounds/snare.wav"></audio>
+    <audio data-key="75" src="resources/sounds/tom.wav"></audio>
+    <audio data-key="76" src="resources/sounds/tink.wav"></audio>
+  </body>
+
+  <script>
+    const btns = document.querySelectorAll('.drum-btn')
+
+    function getRandomColor () {
+        const colorsSet = ['#00A09A', '#BF1523', '#EA4E1C', '#FEE912', '#009EE1']
+        return colorsSet[Math.floor(Math.random()* colorsSet.length)]
+    }
+
+
+    function playSound (soundCode) {
+        const audio = document.querySelector(`audio[data-key="${soundCode}"]`)
+        const btn = document.querySelector(`.drum-btn[data-key="${soundCode}"`)
+
+
+        if(!audio) {
+            return
+        }
+
+        audio.currentTime = 0
+        audio.play()
+        btn.classList.add('playing')
+        btn.style.backgroundColor = getRandomColor();
+
+        document.querySelector('.screen').style.color = getRandomColor()
+    }
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+          playSound(this.dataset.key)
+      })
+    })
+
+
+    window.addEventListener('keydown', playSoundByPress)
+
+    function playSoundByPress (e) {
+        playSound(e.keyCode)
+    }
+
+    btns.forEach(btn => {
+      btn.addEventListener('transitionend', removeTransition )
+    })
+
+    function removeTransition (e) {
+          if(e.propertyName !== 'transform') return
+          this.classList.remove('playing')
+          this.style.backgroundColor= null;
+
+    }
+  </script>
+</html>
