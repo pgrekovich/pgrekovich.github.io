@@ -2,10 +2,12 @@ html {
   font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
-
+    height: 100%;
   box-sizing: border-box;
+}
 
-  background: #ffc600;
+body {
+    height: 100%;
 }
 
 body {
@@ -47,7 +49,7 @@ body {
   display: flex;
   overflow: hidden;
 
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .panel {
@@ -121,9 +123,8 @@ body {
 }
 
 .panel p {
-  font-family: "Amatic SC", cursive;
   font-size: 2rem;
-
+  font-weight: bold; 
   text-transform: uppercase;
 
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
