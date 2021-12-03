@@ -1,0 +1,273 @@
+/* css reset  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --main-color: #d32f27;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* css reset end  */
+
+body {
+  display: flex;
+
+  background: #000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  position: relative;
+
+  display: flex;
+
+  min-width: calc(100% - 48px);
+  min-height: calc(100% - 48px);
+  margin: 24px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.main-controls {
+  display: flex;
+
+  width: 100%;
+  padding: 0 12px;
+}
+
+.main-controls > * {
+  margin: 0 12px;
+}
+
+.player__controls {
+  width: 100%;
+}
+
+.progress-slider {
+  width: 100%;
+}
+
+.player__button {
+  font-weight: bold;
+
+  display: flex;
+
+  width: 25px;
+  height: 25px;
+
+  color: #fff;
+  border: none;
+  background: none;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.player__button:hover {
+  cursor: pointer;
+
+  color: var(--main-color);
+}
+
+.loading-wrapper {
+  position: fixed;
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-modal {
+  font-size: 2rem;
+  font-weight: bold;
+
+  display: flex;
+
+  width: 250px;
+  height: 100px;
+
+  animation: pulsate 5s linear infinite;
+
+  color: var(--main-color);
+
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes pulsate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 3rem;
+  }
+  50% {
+    font-size: 4rem;
+  }
+  75% {
+    font-size: 3rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+input[type="range"] {
+  background: transparent; /* Otherwise white in Chrome */
+
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  cursor: pointer;
+
+  color: transparent;
+  border-color: transparent;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  z-index: 9999;
+
+  width: 16px;
+  height: 16px;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 100%;
+  background: var(--main-color);
+
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4.4px;
+
+  cursor: pointer;
+
+  border: none;
+  /* opacity: .3; */
+  border-radius: 1.3px;
+  background-color: #dfdfdf;
+}
+
+.progress__filled {
+  position: absolute;
+  top: 8px;
+
+  width: 0;
+  height: 4.4px;
+
+  cursor: pointer;
+
+  background: var(--main-color);
+}
+
+.play-button {
+  position: relative;
+
+  width: 25px;
+  height: 25px;
+
+  cursor: pointer;
+
+  border: none;
+  background: none;
+}
+.pb {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: inline-block;
+
+  width: 24px;
+  height: 24px;
+
+  transition: clip-path 0.3s ease;
+
+  background: #fff;
+}
+
+.play-button:hover .pb {
+  cursor: pointer;
+
+  background: var(--main-color);
+}
+
+.pb-before {
+  clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+}
+.pb-after {
+  clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+}
+.play-button.pause .pb-before {
+  clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+}
+.play-button.pause .pb-after {
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+}
