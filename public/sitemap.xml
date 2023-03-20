@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pgrekovich.com/categories/</loc>
+    <loc>http://www.pgrekovich.com/authors/</loc>
   </url><url>
-    <loc>https://pgrekovich.com/</loc>
+    <loc>http://www.pgrekovich.com/categories/</loc>
   </url><url>
-    <loc>https://pgrekovich.com/tags/</loc>
+    <loc>http://www.pgrekovich.com/</loc>
+  </url><url>
+    <loc>http://www.pgrekovich.com/series/</loc>
+  </url><url>
+    <loc>http://www.pgrekovich.com/tags/</loc>
   </url>
 </urlset>

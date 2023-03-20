@@ -1,18 +1,62 @@
-baseURL = "https://pgrekovich.com"
-languageCode = "en-us"
-title = "Pavel Hrakovich Home"
-theme = "m10c"
+baseurl = "http://www.pgrekovich.com"
+title = "Pavel Hrakovich"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+disqusShortname = "#"
+
+[markup.highlight]
+style = "github-dark"
 
 [params]
   author = "Pavel Hrakovich"
-  description = "Just another developer"
+  info = "Just another frontend developer"
+  description = "Pavel Hrakovich's personal website"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/avatar.jpg"
+  #gravatar = "pgrekovich@gmail.com"
 
-  [[params.social]]
-    icon = "github"
-    name = "GitHub"
-    url = "https://github.com/pgrekovich"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
 
-  [[params.social]]
-    icon = "twitter"
-    name = "Twitter"
-    url = "https://twitter.com/pgrekovich"
+  since = 2019
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/pgrekovich/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/pgrekovich/"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
