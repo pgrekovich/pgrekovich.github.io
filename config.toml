@@ -50,6 +50,11 @@ style = "github-dark"
   icon = "fa fa-twitter fa-2x"
   weight = 3
   url = "https://twitter.com/pgrekovich/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 3
+  url = "https://www.linkedin.com/in/pgrekovich/"
 
 # Menu links
 [[menu.main]]
